@@ -32,3 +32,8 @@ button:hover {
 #lastTd {
   padding-right: 3em;
 }
+
+.tableEntry.onPage button {
+  background-color: lightseagreen;
+  color: white;
+}

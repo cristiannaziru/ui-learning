@@ -6,7 +6,6 @@ var firstNames = document.getElementsByClassName("firstName");
 var lastNames = document.getElementsByClassName("lastName");
 var emails = document.getElementsByClassName("email");
 
-console.log("first", avatars);
 function getCurrentPage(page = 1) {
   return page;
 }
@@ -43,7 +42,6 @@ function updateTable(page) {
   });
   console.log("response", response);
   for (let i = 0; i < 3; i++) {
-    console.log(avatars);
     avatars[i].src = response.data[i].avatar;
     firstNames[i].innerHTML = `<p>${response.data[i].first_name}</p>`;
     lastNames[i].innerHTML = `<p>${response.data[i].last_name}</p>`;
