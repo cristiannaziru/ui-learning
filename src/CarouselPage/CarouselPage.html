@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link href="/src/CarouselPage/CarouselPage.css" rel="stylesheet" type="text/css"></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>UI Learning Homework</title>
+  </head>
+
+  <body background="../../background-image.jpg">
+    <div id="mainNav"></div>
+    <div class="carouselBackground">
+      <div class="sliderContainer">
+        <div class="mySlides">
+          <div class="imgNumber">1 / 3</div>
+          <img class="image" src="https://picsum.photos/id/1058/800/600" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <div class="imgNumber">2 / 3</div>
+          <img class="image" src="https://picsum.photos/id/1062/800/600" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <div class="imgNumber">3 / 3</div>
+          <img class="image" src="https://picsum.photos/id/1074/800/600" style="width:100%">
+        </div>
+        <a class="nextImg" onclick="changeSlide(1)">&#10095;</a>
+        <a class="prevImg" onclick="changeSlide(0)">&#10094;</a>
+      </div>
+    </div>
+    <br>
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      $("#mainNav").load("/src/NavBar/NavBar.html");
+    </script>
+    <script src="CarouselPage.js"></script>
+  </body>
+</html>

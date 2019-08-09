@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link href="/src/HomePage/HomePage.css" rel="stylesheet" type="text/css"></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>UI Learning Homework</title>
+  </head>
+
+  <body background="../../background-image.jpg">
+    <div id="mainNav"></div>
+    <div class="homeBackground">
+      <h1>Welcome to my UI Training website!</h1>
+      <p>In the bottom part of this page you can see a quick automatic slide show showing what I've worked on.</p>
+      <div class="sliderContainer">
+        <div class="mySlides">
+          <img class="image" src="/assets/tableExample.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img class="image" src="/assets/slideShow.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img class="image" src="/assets/contactForm.png" style="width:100%">
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      $("#mainNav").load("/src/NavBar/NavBar.html");
+    </script>
+    <script src="/src/HomePage/HomePage.js"></script>
+  </body>
+</html>
