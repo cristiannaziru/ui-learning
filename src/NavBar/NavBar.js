@@ -3,7 +3,6 @@ var pages = document.getElementsByClassName("tableEntry");
 function changeNavPage(page) {
   for (let i = 0; i < pages.length; i++) {
     pages[i].className = "tableEntry";
+    console.log(pages[i]);
   }
-
-  pages[page].className = "tableEntry onPage";
 }
