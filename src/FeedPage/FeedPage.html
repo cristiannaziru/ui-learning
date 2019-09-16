@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/ui-learning/favicon.ico"
+    />
+    <link
+      href="/ui-learning/src/FeedPage/FeedPage.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="/ui-learning/src/FeedPage/Event.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="/ui-learning/src/FeedPage/News.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>UI Learning Homework</title>
+  </head>
+  <body background="/ui-learning/background-image.jpg" align="center">
+    <div id="mainNav"></div>
+    <div style="text-align: center; margin-block-start: 10px">
+      <button id="showForm" onclick="toggleCreateForm(true)">
+        Show create form...
+      </button>
+      <button
+        style="display: none"
+        id="hideForm"
+        onclick="toggleCreateForm(false)"
+      >
+        Hide create form...
+      </button>
+    </div>
+    <div class="feed" align="center">
+      <div class="feedHeader" style="display: none">
+        <div class="createFeedBody">
+          <p><i>Create a post</i></p>
+          <textarea
+            id="postTitle"
+            rows="1"
+            cols="40"
+            placeholder="Enter a title..."
+          ></textarea>
+          <textarea
+            id="postDescription"
+            rows="10"
+            cols="40"
+            placeholder="Enter a description..."
+          ></textarea>
+          <!-- News fields -->
+          <div id="newsField">
+            <hr />
+            <div>
+              <textarea
+                id="postRegion"
+                rows="1"
+                cols="20"
+                placeholder="Enter a region..."
+              ></textarea>
+            </div>
+            <div style="text-align: left">
+              <p style="display: inline-block">Category:</p>
+              <select id="postCategory">
+                <option value="General">General</option>
+                <option value="Politics">Politics</option>
+                <option value="Sports">Sports</option>
+              </select>
+            </div>
+            <div style="text-align: left">
+              <p style="display: inline-block">Archived?:</p>
+              <input id="isArchived" type="checkbox" />
+            </div>
+          </div>
+          <!-- Event Field -->
+          <div id="eventField" style="display: none">
+            <hr />
+            <div style="text-align: left">
+              <textarea
+                id="postLocation"
+                rows="1"
+                cols="20"
+                placeholder="Enter a location..."
+              ></textarea>
+            </div>
+            <div style="text-align: left">
+              <p style="display: inline-block">Event date:</p>
+              <input id="postDate" type="date" />
+            </div>
+            <div style="text-align: left">
+              <p style="display: inline-block">Duration:</p>
+              <input id="postDuration" type="number" min="0" max="24" />
+            </div>
+            <div style="text-align: left">
+              <p style="display: inline-block">Launched?:</p>
+              <input id="isLaunched" type="checkbox" />
+            </div>
+          </div>
+          <hr />
+          <div class="feedToggle">
+            <p id="newsToggle" onclick="toggleFeedType('news')">News</p>
+            <p id="eventToggle" onclick="toggleFeedType('event')">Event</p>
+          </div>
+          <hr />
+          <button
+            id="createNews"
+            style="display: inline-block; background-color: #007bff; cursor: pointer; color: white;"
+            onclick="createPost()"
+          >
+            Create News
+          </button>
+          <button
+            id="createEvent"
+            style="display: none; background-color: #17a2b8; cursor: pointer; color: white;"
+            onclick="createPost()"
+          >
+            Create Event
+          </button>
+        </div>
+      </div>
+      <div class="feedBackground" align="center">
+        <div class="feedBodyHeader" align="center">
+          <div class="feedFilters">
+            <p>
+              <i> Filter by feed type:</i>
+            </p>
+            <select id="feedDropDown" onchange="populateFeed(this.value)">
+              <option value="all">All</option>
+              <option value="news">News</option>
+              <option value="event">Events</option>
+            </select>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <div id="feedBody"></div>
+    </div>
+    <script>
+      $("#mainNav").load("/ui-learning/src/NavBar/NavBar.html");
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="FeedPage.js"></script>
+    <script src="/ui-learning/src/NavBar/NavBar.js"></script>
+  </body>
+</html>

@@ -2,8 +2,16 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" type="image/png" href="/ui-learning/favicon.ico"/>
-    <link href="/ui-learning/src/CarouselPage/CarouselPage.css" rel="stylesheet" type="text/css"></style>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/ui-learning/favicon.ico"
+    />
+    <link
+      href="/ui-learning/src/CarouselPage/CarouselPage.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>UI Learning Homework</title>
   </head>
@@ -14,21 +22,33 @@
       <div class="sliderContainer">
         <div class="mySlides">
           <div class="imgNumber">1 / 3</div>
-          <img class="image" src="https://picsum.photos/id/1058/800/600" style="width:100%">
+          <img
+            class="image"
+            src="https://picsum.photos/id/1058/800/600"
+            style="width:100%"
+          />
         </div>
         <div class="mySlides">
           <div class="imgNumber">2 / 3</div>
-          <img class="image" src="https://picsum.photos/id/1062/800/600" style="width:100%">
+          <img
+            class="image"
+            src="https://picsum.photos/id/1062/800/600"
+            style="width:100%"
+          />
         </div>
         <div class="mySlides">
           <div class="imgNumber">3 / 3</div>
-          <img class="image" src="https://picsum.photos/id/1074/800/600" style="width:100%">
+          <img
+            class="image"
+            src="https://picsum.photos/id/1074/800/600"
+            style="width:100%"
+          />
         </div>
         <a class="nextImg" onclick="changeSlide(1)">&#10095;</a>
         <a class="prevImg" onclick="changeSlide(0)">&#10094;</a>
       </div>
     </div>
-    <br>
+    <br />
 
     <div style="text-align: center">
       <span class="dot" onclick="currentSlide(1)"></span>
@@ -39,5 +59,6 @@
       $("#mainNav").load("/ui-learning/src/NavBar/NavBar.html");
     </script>
     <script src="CarouselPage.js"></script>
+    <script src="/ui-learning/src/NavBar/NavBar.js"></script>
   </body>
 </html>

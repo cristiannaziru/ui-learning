@@ -1,0 +1,135 @@
+.feed {
+  text-align: center;
+}
+.feedBackground {
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  display: initial;
+  text-align: center;
+  width: 936px;
+}
+.feedBackground p {
+  display: inline-block;
+  margin: 8px;
+  size: 8px;
+}
+.feedBackground hr {
+  margin: 0;
+}
+.feedHeader {
+  background-color: white;
+  border-radius: 5px;
+  display: inline-flex;
+  margin: 10px;
+  text-align: center;
+}
+
+.feedHeader textarea,
+.feedHeader p {
+  border: 0px;
+  background-color: white;
+  display: block;
+  margin: 10px;
+  resize: none;
+}
+
+.feedHeader textarea:focus {
+  outline: none;
+}
+
+.createFeedBody p {
+  text-align: left;
+}
+
+.createFeedBody button {
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 4px;
+  text-align: center;
+}
+
+.feedToggle {
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  display: inline-flex;
+  font-size: 13px;
+  margin: 4px;
+}
+.feedToggle p {
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0px;
+  padding: 4px;
+}
+
+#newsToggle {
+  background-color: #007bff;
+}
+
+#feedDropDown {
+  margin: 4px;
+}
+
+.feedFilters {
+  background-color: white;
+  border-radius: 4px;
+  display: inline-block;
+  margin-block-start: 10px;
+  text-align: left;
+}
+
+.createFeedBody hr {
+  margin: 0;
+}
+
+#feedBody {
+  display: inline-block;
+  margin-block-start: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+  .feedBackground {
+    width: 100%;
+  }
+}
+
+.deleteFeed {
+  background-color: transparent;
+  border-radius: 4px;
+  border-color: transparent;
+  float: right;
+}
+
+.card-body {
+  text-align: left;
+}
+
+.card-title {
+  margin-block-end: 0;
+}
+.event-date,
+.event-duration,
+.news-category,
+.news-region {
+  color: gainsboro;
+  font-style: italic;
+  margin-block-end: 0;
+}
+
+.event-launched,
+.news-archived {
+  color: red;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+#postCategory {
+  border-color: transparent;
+  background-color: transparent;
+  padding: 2px;
+}
+
+#postDate {
+  background-color: transparent;
+}

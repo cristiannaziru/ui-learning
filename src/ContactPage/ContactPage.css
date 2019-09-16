@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 input {
   margin: 5px;
 }
@@ -6,12 +10,10 @@ input {
   background-color: lightcyan;
   border-radius: 5px;
   box-shadow: 1px 1px 2px;
+  display: inline-block;
   margin-top: 0.5em;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
   padding: 2em;
   text-align: center;
-  width: 758px;
 }
 
 #submitBtn {

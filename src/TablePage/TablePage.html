@@ -2,10 +2,18 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" type="image/png" href="/ui-learning/favicon.ico"/>
-    <link href="/ui-learning/src/TablePage/TablePage.css" rel="stylesheet" type="text/css"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/ui-learning/favicon.ico"
+    />
+    <link
+      href="/ui-learning/src/TablePage/TablePage.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="TablePage.js"></script>
 
     <title>UI Learning Homework</title>
   </head>
@@ -13,7 +21,7 @@
   <body background="/ui-learning/background-image.jpg">
     <div id="mainNav"></div>
     <div class="tableBackground">
-      <table align="center">
+      <table id="profileTable" align="center">
         <tbody>
           <tr>
             <th>Profile Picture</th>
@@ -22,38 +30,83 @@
             <th>Email</th>
           </tr>
           <tr>
-            <td><img class="avatar" src=""/></td>
-            <td class="firstName"></td>
-            <td class="lastName"></td>
-            <td  class="email"></td>
-          </tr>
-          <tr>
-            <td><img class="avatar" src=""/></td>
-            <td class="firstName"></td>
-            <td class="lastName"></td>
-            <td  class="email"></td>
-          </tr>
-          <tr>
-            <td><img class="avatar" src=""/></td>
+            <td><img class="avatar" src="/" /></td>
             <td class="firstName"></td>
             <td class="lastName"></td>
             <td class="email"></td>
           </tr>
-          <tr style="border-bottom: 1px solid #000">
+          <tr>
+            <td><img class="avatar" src="/" /></td>
+            <td class="firstName"></td>
+            <td class="lastName"></td>
+            <td class="email"></td>
+          </tr>
+          <tr>
+            <td><img class="avatar" src="/" /></td>
+            <td class="firstName"></td>
+            <td class="lastName"></td>
+            <td class="email"></td>
+          </tr>
+          <tr style="border-bottom: 1px solid #000"></tr>
         </tbody>
       </table>
-    </br>
-    <hr>
+      <div class="smallScreenTable">
+        <div class="gridContainer">
+          <div>Picture</div>
+          <div>Name</div>
+          <div>Email</div>
+          <div>test</div>
+          <div>test</div>
+          <div>test</div>
+        </div>
+      </div>
+      <br />
+      <hr />
       <div align="center">
-          <div class="numbers active" onclick="changePage(1)">1</div>
-          <div class="numbers" onclick="changePage(2)">2</div>
-          <div class="numbers" onclick="changePage(3)">3</div>
-          <div class="numbers" onclick="changePage(4)">4</div>
+        <div class="numbers active" onclick="changePage(1)">1</div>
+        <div class="numbers" onclick="changePage(2)">2</div>
+        <div class="numbers" onclick="changePage(3)">3</div>
+        <div class="numbers" onclick="changePage(4)">4</div>
       </div>
     </div>
+    <div>
+      <button onclick="handlePost()">POST</button>
+      <button onclick="handlePut()">PUT</button>
+      <button onclick="handlePatch()">PATCH</button>
+      <button onclick="handleDelete()">DELETE</button>
+    </div>
+    <div id="responseBody">
+      Click one of the above buttons in order to generate a response!
+    </div>
+    <div>
+      <input id="createUserEmail" type="text" />
+      <input id="createUserPassword" type="password" />
+      <button id="createUserBtn" onclick="handleAlexCreateUser()">
+        Create User
+      </button>
+    </div>
+    <div id="createUserResponse">Create User Response will come here!</div>
+    <div>
+      <input id="loginEmail" type="text" />
+      <input id="loginPassword" type="password" />
+      <button id="loginBtn" onclick="handleAlexLogin()">Login</button>
+    </div>
+    <div id="loginResponse">Login Response will come here!</div>
+    <div>
+      <button id="getRestrictedBtn" onclick="handleAlexGetRestricted()">
+        Get Restricted
+      </button>
+      <div id="getRestrictedResponse">Restricted Response will come here!</div>
+    </div>
+    <h2>Homework Part two</h2>
+    <button onclick="handlePromiseAll()">Generate two promises</button>
+    <div id="promiseAllResponse"></div>
+
     <script>
       $("#mainNav").load("/ui-learning/src/NavBar/NavBar.html");
     </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="TablePage.js"></script>
+    <script src="/ui-learning/src/NavBar/NavBar.js"></script>
   </body>
 </html>

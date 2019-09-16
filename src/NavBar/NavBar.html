@@ -1,35 +1,44 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <link href="/ui-learning/src/NavBar/NavBar.css" rel="stylesheet" type="text/css"></style>
-    <script src="/ui-learning/src/NavBar/NavBar.js"></script>
-  </head>
-  <body>
-      <table class="tableBorder" align="center">
-        <tbody>
-          <tr>
-            <td id="firstTd" class="tableEntry" onclick="changeNavPage(0)">
-              <a href="/ui-learning/"><button>Home</button></a>
-            </td>
-            <td class="tableEntry" onclick="changeNavPage(1)">
-              <a href="/ui-learning/src/TablePage/TablePage.html"><button>Table</button></a>
-            </td>
-            <td class="tableEntry" onclick="changeNavPage(2)">
-              <a href="/ui-learning/src/CarouselPage/CarouselPage.html">
-                <button>
-                  Carousel
-                </button>
-              </a>
-            </td>
-            <td id="lastTd" class="tableEntry" onclick="changeNavPage(3)">
-              <a href="/ui-learning/src/ContactPage/ContactPage.html">
-                <button>
-                  Contact
-                </button>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-  </body>
-</html>
+<link
+  href="/ui-learning/src/NavBar/NavBar.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<table class="tableBorder" align="center">
+  <tbody>
+    <tr>
+      <td id="firstTd" class="tableEntry">
+        <a href="/ui-learning/"><button class="navButtons">Home</button></a>
+      </td>
+      <td class="tableEntry">
+        <a href="/ui-learning/src/FeedPage/FeedPage.html">
+          <button class="navButtons">
+            Feed
+          </button>
+        </a>
+      </td>
+      <td class="tableEntry">
+        <a href="/ui-learning/src/TablePage/TablePage.html">
+          <button class="navButtons">Table</button>
+        </a>
+      </td>
+      <td class="tableEntry">
+        <a href="/ui-learning/src/CarouselPage/CarouselPage.html">
+          <button class="navButtons">
+            Carousel
+          </button>
+        </a>
+      </td>
+      <td id="lastTd" class="tableEntry">
+        <a href="/ui-learning/src/ContactPage/ContactPage.html">
+          <button class="navButtons">
+            Contact
+          </button>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script
+  onload="updateNavButton()"
+  src="/ui-learning/src/NavBar/NavBar.js"
+></script>
